@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="AzureDeploy" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="PSoC.ManagementService">
+    <Instances count="4" />
+    <ConfigurationSettings>
+      <Setting name="OAuthApplicationId" value="c23cd56c-0fd0-4de6-8b8f-97e4332d9eea" />
+      <Setting name="OAuthClientId" value="42b1233a-2020-4bb2-8f5f-78daff0cb84d" />
+      <Setting name="OAuthUrl" value="https://schoolnet-dct.ccsocdev.net/" />
+      <Setting name="EncryptionCertificateThumbprint" value="0f97b99e6d2c215054c0e95c30ad41c262fb329e" />
+      <Setting name="AuthenticationBypassEnabled" value="false" />
+      <Setting name="LogAll" value="false" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="MySSLCert" thumbprint="42761369C5A9FAA39EA29F80D3CC11CFD76BFACE" thumbprintAlgorithm="sha1" />
+      <Certificate name="MyEncryptCert" thumbprint="0F97B99E6D2C215054C0E95C30AD41C262FB329E" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="PSoC.ManagementService.LicenseTimer">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="LicenseCleanupInterval" value="300" />
+      <Setting name="TimeoutToDeleteExpiredLicenses" value="120"/>
+      <Setting name="LogAll" value="false" />
+      <Setting name="LicenseArchiveCleanupInterval" value="660" />
+      <Setting name="LicenseRequestRetentionInDays" value="30" />
+      <Setting name="LicenseRequestArchiveBatchSize" value="50000" />
+      <Setting name="BulkCopyTimeoutInSecounds" value="600" />
+      <Setting name="BulkCopyBatchSize" value="10000" />
+      <Setting name="SqlCommandTimeout" value="120" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

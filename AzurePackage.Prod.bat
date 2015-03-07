@@ -1,0 +1,1 @@
+MSBuild.exe AzureDeploy\AzureDeploy.ccproj /t:Publish /p:Configuration=Prod;TargetProfile=Prod;SolutionDir=C:\Projects\Pearson\enterprise-management-service\

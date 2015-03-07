@@ -1,0 +1,383 @@
+﻿
+#div_id_wrapper { /*------- Wrapper Division*/
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: trebuchet ms,tahoma,sans-serif;
+}
+
+
+#div_id_canvas { /*------- Canvas Division */
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    min-width: 850px !important;
+    width: 95%;
+    background-color: white;
+    border: solid 2px #ccc;
+}
+
+#div_id_header { /*---------------Header Section*/
+    background-color: white;
+    height: 90px;
+    margin-bottom: 0;
+    border-bottom: 2px !important;
+    border-bottom-color: black;
+}
+
+#div_id_logo {
+    background-image: url("../images/logo.png");
+    clear: left;
+    display: inline-block;
+    float: left;
+    height: 71px;
+    margin-left: 80px;
+    margin-top: 10px;
+    width: 195px;
+    background-repeat: no-repeat;
+}
+
+#pearson {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    text-align: right;
+    color: #71B69F;
+}
+
+#systemoc {
+    color: black;
+}
+
+#pemText {
+    position: relative;
+    top: 5px;
+    right: 0px;
+    font-size: 13pt;
+    line-height: 16pt;
+    font-family: trebuchet ms;
+    color: #7ABCBE;
+    width: 370px;
+}
+
+#div_id_controlbar { /*----- Controls */
+    position: absolute;
+    top: 40px;
+    right: 42px;
+    font-family: trebuchet ms;
+    font-size: 12pt;
+    color: #999;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+    #div_id_controlbar a {
+        color: inherit;
+    }
+
+
+#div_user_logout { /* User name and logout btn*/
+    position: relative;
+    float: left;
+    height: 36px;
+    left: 0px;
+    margin-right: 10px;
+    width: 100px;
+    border-right: solid #D4D4D4 1px;
+    padding-right: 5px;
+}
+
+#div_id_controls { /*-------- Admin Index, Settings, logout*/
+    position: relative;
+    float: right;
+    top: 3px;
+    right: 0px;
+    height: 26px;
+    color: #198098;
+}
+
+
+#div_id_username { /*------------ Username */
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+    text-decoration-color: #333333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#btn_id_adminIndex {
+    position: relative;
+    top: 6px;
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    left: 0px;
+    box-sizing: content-box;
+    border-width: 1px;
+    border: #CCCCCC solid 1px;
+    border-radius: 8px;
+    margin-right: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+    width: 126px;
+}
+
+#btn_id_settings {
+    border: solid 1px #CCCCCC;
+    top: 0px;
+    padding-top: 1px;
+    line-height: 20pt;
+    padding: 4px;
+    width: 25px;
+    height: 100%;
+    border-radius: 8px;
+    box-sizing: content-box;
+    padding-bottom: 0px;
+    float: right;
+    background-image: url('../../Content/images/Settings_Button_Normal.png');
+    background-position: -4px -5px;
+    color: transparent;
+}
+
+    #btn_id_settings:hover {
+        background-image: url('../../Content/images/Settings_Button_Active.png');
+        opacity: .5;
+    }
+
+#btn_id_Logout {
+    width: 63px;
+    position: absolute;
+    bottom: -4px;
+    right: 0px;
+    font-size: 12px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #9A9A9A !important;
+    cursor: pointer;
+}
+
+.controlBtn:hover {
+    background-color: #ccc;
+}
+
+#div_id_popupSettings { /*-------- Popup settings -- hidden on page load*/
+    position: absolute;
+    top: 35px;
+    right: -18px;
+    width: 170px;
+    height: 105px;
+    background-image: url("../images/dropdown_2row.png");
+    background-repeat: no-repeat;
+    z-index: 9998;
+    font-size: 11pt;
+    text-align: center;
+    color: #666;
+    display: none;
+}
+
+#div_id_access_popupSettings { /*--------School Admin Popup settings -- hidden on page load*/
+    position: absolute;
+    top: 35px;
+    right: -15px;
+    width: 165px;
+    height: 100px;
+    background-image: url("../images/dropdown_1row.png");
+    background-repeat: no-repeat;
+    z-index: 9998;
+    font-size: 11pt;
+    text-align: center;
+    color: #666;
+    display: none;
+    padding-top: 23px;
+}
+
+#popupset_ap {
+    position: relative;
+    top: 4px;
+    /* padding:8px;*/
+    border-radius: 5px;
+}
+
+    #popupset_ap:hover {
+        background-color: #ccc;
+    }
+
+#div_id_popupConfirmation {
+    position: relative;
+    top: 140px;
+    margin: 0 auto;
+    z-index: 9999;
+    width: 500px;
+    height: 160px;
+    background-color: white;
+    border: solid 1px #666;
+    font-family: trebuchet ms, tahoma;
+    font-size: 15pt;
+    color: #666;
+    border-radius: 4px;
+    display: none;
+}
+
+#popup_title {
+    position: absolute;
+    top: 0px;
+    width: 475px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    border-bottom: solid 1px #666;
+}
+
+#popup_msg {
+    position: relative;
+    margin-top: 70px;
+    padding-left: 25px;
+}
+
+.cls_popupsettingsbtn {
+    position: relative;
+    float: left;
+    width: 150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-left: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .cls_popupsettingsbtn:hover {
+        background-color: #f2f2f2 !important;
+    }
+
+#popupset_district {
+    margin-top: 23px;
+}
+
+
+#div_id_popupConfirmation { /*------------------Popup confim - Hidden at page load*/
+    position: absolute;
+    top: 40px;
+    margin: 0 auto;
+    z-index: 9999;
+    width: 500px;
+    height: 160px;
+    background-color: white;
+    border: solid 1px #666;
+    font-family: trebuchet ms, tahoma;
+    font-size: 15pt;
+    color: #666;
+    border-radius: 4px;
+    display: none;
+    margin-left: 530px;
+}
+
+#popup_title {
+    position: absolute;
+    top: 0px;
+    width: 475px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    border-bottom: solid 1px #666;
+}
+
+#popup_msg {
+    position: relative;
+    margin-top: 70px;
+    padding-left: 25px;
+}
+
+.cls_popupbtn {
+    position: relative;
+    padding: 2px;
+    width: 50px;
+    text-align: center;
+    top: 20px;
+    border: solid 1px #666;
+    border-radius: 4px;
+    font-size: 12pt;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    float: left;
+    margin-left: 5px;
+}
+
+#div_id_popupbtn {
+    position: relative;
+    width: 130px;
+    margin: 0 auto;
+}
+
+.cls_popupbtn:hover {
+    background-color: #ccc;
+}
+
+#div_id_information { /*-----------------Information Section*/
+    position: relative;
+    width: 100%;
+    height: 520px;
+    /*background-color: #ccc;*/
+}
+
+#div_id_infoWrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+}
+
+#div_id_info {
+    position: relative;
+    margin: 0 auto;
+    width: 830px;
+    background-color: white;
+    height: 95%;
+    top: 10px;
+}
+
+
+.info_titlesection { /*--------TITLE */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 70px;
+    border-bottom: solid 2px #ccc;
+}
+
+.info_title {
+    position: absolute;
+    width: 200px;
+    font-size: 16pt;
+    color: #777;
+    padding: 24px;
+}
+
+#deviceStatusForm .controls-top .btn-group ul li .glyphicon-search::before {
+    top: 1px !important;
+}
+
+#deviceStatusForm .controls-top .btn-group ul li input {
+    /*line-height:normal;*/
+    /*padding-top:5px;*/
+}
+
+
+/* WRAPPER BACK */
+.wrapper_tbl_back{
+    background-color:red;
+    position:relative;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:0;
+}

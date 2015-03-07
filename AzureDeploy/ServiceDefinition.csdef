@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="AzureDeploy" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
+  <WebRole name="PSoC.ManagementService" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="SslEndpoint" endpointName="SSL" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="SSL" protocol="https" port="443" certificate="MySSLCert" />
+    </Endpoints>
+    <ConfigurationSettings>
+      <Setting name="OAuthApplicationId" />
+      <Setting name="OAuthClientId" />
+      <Setting name="OAuthUrl" />
+      <Setting name="EncryptionCertificateThumbprint" />
+      <Setting name="AuthenticationBypassEnabled" />
+      <Setting name="LogAll" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="MySSLCert" storeLocation="LocalMachine" storeName="My" />
+      <Certificate name="MyEncryptCert" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WebRole>
+  <WorkerRole name="PSoC.ManagementService.LicenseTimer" vmsize="Small">
+    <ConfigurationSettings>
+      <Setting name="LicenseCleanupInterval" />
+      <Setting name="TimeoutToDeleteExpiredLicenses"/>
+      <Setting name="LogAll" />
+      <Setting name="LicenseArchiveCleanupInterval" />
+      <Setting name="LicenseRequestRetentionInDays" />
+      <Setting name="LicenseRequestArchiveBatchSize" />
+      <Setting name="BulkCopyTimeoutInSecounds" />
+      <Setting name="BulkCopyBatchSize" />
+      <Setting name="SqlCommandTimeout" />
+    </ConfigurationSettings>
+  </WorkerRole>
+</ServiceDefinition>

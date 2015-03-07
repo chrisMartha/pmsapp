@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSoC EMS @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/global")
+    @RenderSection("styles", required: false)
+</head>
+<body id="@(ViewBag.BodyClass)">
+    <div id="div_id_wrapper">
+        <!-- Main wrapper division -->
+
+        <div id="div_id_header">
+            <!-- header section -->
+
+            <a href="@Url.Action("Index", "Admin")" style="text-decoration:none;">
+                <span id="div_id_logo"></span>
+            </a><!-- /logo -->
+            @if (ViewBag.IsAuthenticated != null && ViewBag.IsAuthenticated)
+            {
+                <div id="div_id_controlbar">
+                    <!-- controls -->
+                    <div id="div_user_logout" class="btn_x" style="">
+                        <div id="div_id_username">@ViewBag.Username</div><!-- username -->
+                        <a id="btn_id_Logout" class="controlBtn" onclick="toggleVisibility('div_id_popupConfirmation','on')" style="text-decoration:none;">Log Out</a>
+                    </div>
+
+                    <div id="div_id_controls" class="btn_x">
+                        <!-- controls -->
+                        @if (User.IsInRole("GlobalAdmin"))
+                        {
+                            <a id="btn_id_adminIndex" class="controlBtn" href="@Url.Action("Index", "Admins")" style="text-decoration:none;">Admin Index</a>
+                        }
+                        @*Checking whether the User is School Admin or not*@
+                        @if (!User.IsInRole("SchoolAdmin"))
+                        {
+                            <div id="btn_id_settings" class="controlBtn" onclick="toggleVisibilityauto('div_id_popupSettings');">
+                         
+                            </div>
+                        }
+                        else
+                        {
+                            <div id="btn_id_settings" class="controlBtn" onclick="toggleVisibilityauto('div_id_access_popupSettings');">
+                         
+                            </div>
+                        }
+
+                    </div>
+
+                    <!--Overlay Popup for Global and District Admin-->
+                    <div id="div_id_popupSettings">
+                        <div id="div_id_triangle"></div>
+                        @if ((User.IsInRole("GlobalAdmin")) || (User.IsInRole("DistrictAdmin")))
+                        {
+                            <a id="popupset_district" class="cls_popupsettingsbtn" href="@Url.Action("district", "settings")" style="text-decoration:none;">District Settings</a>
+                        }
+                        else
+                        {  <div id="popupset_district" class="cls_popupsettingsbtn">&nbsp;</div>
+                        }
+
+                        @if ((User.IsInRole("GlobalAdmin")) || (User.IsInRole("DistrictAdmin")) || (User.IsInRole("SchoolAdmin")))
+                        {
+                            <a id="popupset_ap" class="cls_popupsettingsbtn" href="@Url.Action("accesspoint", "settings")" style="text-decoration:none;">Access Point Settings</a>
+                        }
+                        else
+                        {
+                            <div id="popupset_ap" class="cls_popupsettingsbtn">&nbsp;</div>
+                        }
+
+                    </div>
+                    <!--Overlay Popup for School Admin-->
+                    <div id="div_id_access_popupSettings">
+                        <div id="div_id_triangle"></div>
+                        <a id="popupset_ap" class="cls_access_popupsettingsbtn" href="@Url.Action("accesspoint", "settings")" style="text-decoration:none;">Access Point Settings</a>
+
+                    </div>
+
+                </div><!--/ controls -->
+            }
+
+
+        </div>
+
+        <div id="div_id_information">
+            <!-- Information section -->
+            <div id="div_id_popupConfirmation">
+                <!-- Popup Confirmations -->
+                <div id="popup_title"> Logged Out</div>
+                <div id="popup_msg">Are you sure you'd like to logout</div>
+                <div id="div_id_popupbtn">
+                    <a id="popup_yes" style="text-decoration:none;" class="cls_popupbtn" href="@Url.Action("Logout", "Account")">YES</a>
+                    <a id="popup_no" class="cls_popupbtn" onclick="toggleVisibility('div_id_popupConfirmation','off')" style="text-decoration:none;">NO</a>
+                </div>
+            </div><!-- /popupConfirmations -->
+            @RenderBody()
+
+        </div><!-- /InformationSection -->
+
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+
