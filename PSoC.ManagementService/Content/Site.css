@@ -365,7 +365,7 @@ th {
   margin: 10px auto 5px auto;
 }
 table.dataTable.no-footer {
-  border-bottom: 0px ;
+  border-bottom: 0px;
 }
 table#devices {
   width: 1170px;
@@ -607,9 +607,9 @@ td {
   display: table-cell;
   width: 125px;
 }
-    table.display thead tr:first-child th {
-        padding-top:20px;
-    }
+table.display thead tr:first-child th {
+  padding-top: 20px;
+}
 table.display thead tr th {
   border: none !important;
   font-weight: normal;
@@ -786,7 +786,7 @@ button.btn-link::-moz-focus-inner {
 /* DROP DOWN MENU CSS OVERRIDES */
 .dropdown-header {
   display: inline-block;
-  padding-right:1px;   
+  padding-right: 1px;
   margin-top: 30px;
 }
 .dropdown-header li {
@@ -809,16 +809,16 @@ button.btn-link::-moz-focus-inner {
   color: white;
 }
 /*.dropdown-header .btn::after {
-  content: '';
-  background-image: url('../Content/images/Blue_Arrow_Big.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 30px;
-  height: 30px;
-  padding-left: 230px;
-  padding-right: 0px;
-  text-align: right;
-}*/
+        content: '';
+        background-image: url('../Content/images/Blue_Arrow_Big.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 30px;
+        height: 30px;
+        padding-left: 230px;
+        padding-right: 0px;
+        text-align: right;
+    }*/
 .dropdown-header > .open > .btn::after {
   background-image: url('../Content/images/Close_Filter_Button.png');
   background-size: contain;
@@ -1001,7 +1001,7 @@ button.btn-link::-moz-focus-inner {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: normal;
   border-color: #EEEEEE;
-  /*width: 233.46px;*/
+  /*width: 100%;*/
   text-align: left;
 }
 .dropdown-header .btn::after {
@@ -1155,11 +1155,7 @@ button.btn-link::-moz-focus-inner {
 #statusTable_info {
   display: none;
 }
-div.
-*::before, *::after {
-    box-sizing: border-box;
-}
-/*.dropdown-header .btn::after {
+div.dashboard-container {
   position: relative;
   background-color: #ccc;
   min-width: 1170px;
@@ -1167,7 +1163,7 @@ div.
   display: block;
   padding-left: 25px;
   padding-right: 25px;
-}*/
+}
 .dashboard-container .controls-top {
   background-color: transparent;
   width: inherit;
@@ -1234,7 +1230,6 @@ div.
 }
 #dataTable {
   padding-bottom: 75px;
-
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
@@ -1245,9 +1240,9 @@ div.
   opacity: 1 !important;
 }
 /*#white_Bg {
-  width: 100px;
-  background-color: black;
-  overflow: hidden;
+    width: 100px;
+    background-color: black;
+    overflow: hidden;
 }*/
 #district_label {
   margin-bottom: 0px;
@@ -1266,7 +1261,6 @@ div.
   border-top-left-radius: 8px;
   overflow: hidden;
   z-index: 0;
-  /*float: right;*/
   height: 50px;
   margin-top: 60px;
 }
