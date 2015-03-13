@@ -123,7 +123,7 @@ $(document).ready(function () {
             }*/
 
         buttonText: function(options) {
-            return RenderButtonTest(options, "District");
+            return RenderButtonTest(options, "District &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
         },
         onDropdownHide: function () {
             $("#DistrictDropdown .multiselect-search").val('');
@@ -148,7 +148,7 @@ $(document).ready(function () {
             }
 */
         buttonText: function(options) {
-            return RenderButtonTest(options, "School");
+            return RenderButtonTest(options, "School &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
         },
         onDropdownHide: function () {
             $("#SchoolDropdown .multiselect-search").val('');
