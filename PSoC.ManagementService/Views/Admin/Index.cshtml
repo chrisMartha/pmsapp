@@ -15,7 +15,7 @@
                 @*<div class="dashboard-container">*@
                 @*<div class="controls-top">*@
 
-                <div id="DistrictDropdown" class="col-md-2 dropdown-header">
+                <div id="DistrictDropdown" class="col-md-2 dropdown-header" style="padding-left:15px">
                     <label id="district_label" class="filter_label">District</label>
                     @if (ViewBag.UserType == "GlobalAdmin")
                     {
@@ -31,7 +31,7 @@
                     }
                     else if (Model != null && Model.DistrictList != null && Model.DistrictList.Count > 0)
                     {
-                        @Html.DisplayTextFor(x => x.DistrictList[0].Item2 +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
+                        @Html.DisplayTextFor(x => x.DistrictList[0].Item2 + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;")
                     }
                     else
                     {
@@ -78,7 +78,7 @@
                     <div id="white_Bg" style=""></div>
 
                     <label id="show1">SHOW:</label>
-                
+
                 </div>
             </div>
             <div class="row">
@@ -120,15 +120,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <div id="expire-dialog" title="Confirmation" style="display:none;">
-                        <p>Are you sure you want to expire this License?</p>
-                    </div>
+                <div class="col-md-12">&nbsp;
                 </div>
             </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="expire-dialog" title="Confirmation" style="display:none;">
+                                <p>Are you sure you want to expire this License?</p>
+                            </div>
+                        </div>
+                    </div>
 
-        </div><!-- Main fluid Container Start -->
-    </div><!-- Main Container End -->
+                </div><!-- Main fluid Container Start -->
+            </div><!-- Main Container End -->
 </form>
 @section scripts
 {

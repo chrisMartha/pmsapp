@@ -43,6 +43,7 @@ body {
   background-attachment: fixed;
 }
 a {
+  color: #43474A;
   text-decoration: none;
 }
 li {
@@ -787,7 +788,8 @@ button.btn-link::-moz-focus-inner {
 .dropdown-header {
   display: inline-block;
   padding-right: 1px;
-  margin-top: 30px;
+  padding-bottom: 0px;
+  margin-top: 25px;
 }
 .dropdown-header li {
   margin: 1px;
@@ -1230,6 +1232,7 @@ div.dashboard-container {
 }
 #dataTable {
   padding-bottom: 75px;
+  background-color: #ffffff;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
